@@ -2,7 +2,7 @@ package wap.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name="patron")
+@Table(name="patrons")
 public class Patron {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
