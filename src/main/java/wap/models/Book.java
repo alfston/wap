@@ -7,7 +7,7 @@ public class Book {
   @Id
   private Integer ISBN;
   private String name;
-  private String subject;
+  private String subject; //comment
   private String publisher;
   private String publicationDate;
   private String authorId;
