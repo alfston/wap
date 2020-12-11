@@ -1,4 +1,4 @@
-class UserList extends React.Component {
+class BookList extends React.Component {
 
     state = {
         books: []
@@ -29,6 +29,7 @@ class UserList extends React.Component {
                         this.state.books.map(book =>
                             <tr>
                                 <td>
+                                    {book.ISBN}
                                     {book.name}
 
                                 </td>
@@ -38,7 +39,7 @@ class UserList extends React.Component {
                                     </button>
                                 </td>
                                 <td>
-                                    <a href={`user-editor.html?id=${book.ISBN}`}>
+                                    <a href={`Book-editor.html?id=${book.ISBN}`}>
                                         Edit
                                     </a>
                                 </td>
@@ -56,4 +57,4 @@ class UserList extends React.Component {
 }
 
 ReactDOM.render(
-    <UserList/>, document.getElementById("root"))
+    <BookList/>, document.getElementById("root"))
