@@ -1,6 +1,6 @@
 package wap.models;
 import javax.persistence.*;
-
+//this is a book
 @Entity
 @Table(name="books")
 public class Book {
