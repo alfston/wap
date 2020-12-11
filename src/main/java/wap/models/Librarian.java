@@ -2,7 +2,7 @@ package wap.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name="librarian")          //test comment
+@Table(name="librarians")          //test comment
 public class Librarian{
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
