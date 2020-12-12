@@ -1,12 +1,12 @@
 class BookList extends React.Component {
 
     state = {
-        books: []
+        book: []
     }
 
     findAllBooks = () =>
         findAllBooks()
-            .then(books => this.setState({books}))
+            .then(book => this.setState({book}))
 
     componentDidMount = () =>
         this.findAllBooks()
@@ -15,9 +15,6 @@ class BookList extends React.Component {
         createBook()
             .then(this.findAllBooks)
 
-    deleteBook = (isbn) =>
-        deleteBook(isbn)
-            .then(this.findAllBooks)
 
     render() {
         return(
@@ -26,20 +23,19 @@ class BookList extends React.Component {
                 <table>
                     <tbody>
                     {
-                        this.state.books.map(book =>
+                        this.state.book.map(book =>
                             <tr>
                                 <td>
-                                    {book.ISBN}
-                                    {book.name}
-
+                                    {book.id} &nbsp; &ndash; &nbsp;
+                                    {book.name} &nbsp;
                                 </td>
+                                {/*// <td>*/}
+                                {/*//     <button onClick={() => this.deleteUser(user.id)}>*/}
+                                {/*//         Delete*/}
+                                {/*//     </button>*/}
+                                {/*// </td>*/}
                                 <td>
-                                    <button onClick={() => this.deleteBook(book.ISBN)}>
-                                        Delete
-                                    </button>
-                                </td>
-                                <td>
-                                    <a href={`Book-editor.html?id=${book.ISBN}`}>
+                                    <a href={`book-editor.html?id=${book.id}`}>
                                         Edit
                                     </a>
                                 </td>
@@ -55,6 +51,6 @@ class BookList extends React.Component {
         )
     }
 }
-
 ReactDOM.render(
     <BookList/>, document.getElementById("root"))
+
