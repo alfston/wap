@@ -1,4 +1,3 @@
-
 class AccountList extends React.Component {
 
     state = {
@@ -24,27 +23,28 @@ class AccountList extends React.Component {
         return(
             <div>
                 <h1>Account List</h1>
+
+
                 <table>
                     <tbody>
                     {
                         this.state.accounts.map(account =>
                             <tr>
                                 <td>
-                                    {account.id} &nbsp; &ndash; &nbsp;
+                                    {account.id} &nbsp;
                                     {account.state} &nbsp;
-                                    {account.item1.toString()} &nbsp; &ndash; &nbsp;
+                                    {account.item1} &nbsp;
                                     {account.item2} &nbsp;
+                                    {account.item3} &nbsp;
+
+
                                 </td>
                                 <td>
                                     <button onClick={() => this.deleteAccount(account.id)}>
                                         Delete
                                     </button>
                                 </td>
-                                <td>
-                                    <a href={`account-editor.html?id=${account.id}`}>
-                                        Edit
-                                    </a>
-                                </td>
+
                             </tr>
                         )
                     }
