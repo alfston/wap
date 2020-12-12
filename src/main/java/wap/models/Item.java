@@ -12,7 +12,7 @@ import javax.persistence.*;
     private String lang;
     private String format;
     private String borrowed;
-    private Integer loanPeriod;
+    private String loanPeriod;
     private String dueDate;
     private Boolean isOverDue;
 
@@ -56,11 +56,11 @@ import javax.persistence.*;
       this.borrowed = borrowed;
     }
 
-    public Integer getLoanPeriod() {
+    public String getLoanPeriod() {
       return loanPeriod;
     }
 
-    public void setLoanPeriod(Integer loanPeriod) {
+    public void setLoanPeriod(String loanPeriod) {
       this.loanPeriod = loanPeriod;
     }
 
