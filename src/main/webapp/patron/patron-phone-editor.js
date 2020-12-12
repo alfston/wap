@@ -1,4 +1,4 @@
-class PatronAddressEditor extends React.Component {
+class PatronPhoneEditor extends React.Component {
 
     state = {
         patron: {}
@@ -14,22 +14,22 @@ class PatronAddressEditor extends React.Component {
     }
 
     Patron = () =>
-        renameAddress(this.state.patron)
+        renamePhoneNumber(this.state.patron)
 
     render() {
         return(
             <div className="container">
-                <h1>Address Editor {this.state.Patron.address}</h1>
+                <h1>Phone Number Editor {this.state.Patron.phone_number}</h1>
                 <input className="form-control" readOnly={true} value={this.state.patron.id}/>
                 <input
                     onChange={(event) => this.setState({
                         patron: {
                             ...this.state.patron,
-                            address: event.target.value
+                            phone_number: event.target.value
                         }
                     })}
                     className="form-control"
-                    value={this.state.patron.address}/>
+                    value={this.state.patron.phone_number}/>
                 <button onClick={this.savePatron}>
                     Save
                 </button>
@@ -42,4 +42,4 @@ class PatronAddressEditor extends React.Component {
 }
 
 ReactDOM.render(
-    <PatronAddressEditor/>, document.getElementById("root"))
+    <PatronPhoneEditor/>, document.getElementById("root"))
