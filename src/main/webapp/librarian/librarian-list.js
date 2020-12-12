@@ -1,40 +1,55 @@
 class LibrarianList extends React.Component {
 
     state = {
-        librarians: []
+        librarian: []
     }
 
     findAllLibrarians = () =>
         findAllLibrarians()
-            .then(librarians => this.setState({librarians}))
+            .then(librarian => this.setState({librarian}))
 
     componentDidMount = () =>
         this.findAllLibrarians()
 
+    createLibrarian = () =>
+        createLibrarian()
+            .then(this.findAllLibrarians)
+
+
     render() {
         return(
             <div>
-                <h1>Librarians</h1>
+                <h1>Librarian Positions</h1>
                 <table>
                     <tbody>
-                        {
-                            this.state.librarians.map(librarian =>
-                                <tr>
-                                    <td>
-                                        {librarian.id}
-                                    </td>
-                                    <td>
-                                        {librarian.position}
-                                    </td>
-                                </tr>
-                            )
-                        }
+                    {
+                        this.state.librarian.map(librarian =>
+                            <tr>
+                                <td>
+                                    {librarian.id} &nbsp; &ndash; &nbsp;
+                                    {librarian.position} &nbsp;
+                                </td>
+                                {/*// <td>*/}
+                                {/*//     <button onClick={() => this.deleteUser(user.id)}>*/}
+                                {/*//         Delete*/}
+                                {/*//     </button>*/}
+                                {/*// </td>*/}
+                                <td>
+                                    <a href={`librarian-editor.html?id=${librarian.id}`}>
+                                        Edit
+                                    </a>
+                                </td>
+                            </tr>
+                        )
+                    }
                     </tbody>
                 </table>
+                <button onClick={this.createLibrarian}>
+                    Create
+                </button>
             </div>
         )
     }
 }
-
 ReactDOM.render(
     <LibrarianList/>, document.getElementById("root"))
