@@ -21,16 +21,16 @@ class PatronList extends React.Component {
 
     deletePatron = (id) =>
         deletePatron(id)
-            .then(this.findAllBooks)
+            .then(this.findAllPatrons)
 
     render() {
         return(
             <div>
-                <h1>Patrons a</h1>
+                <h1>Patrons</h1>
                 <table>
                     <tbody>
                     {
-                        this.state.books.map(patron =>
+                        this.state.patrons.map(patron =>
                             <tr>
                                 <td>
                                     {patron.id}
