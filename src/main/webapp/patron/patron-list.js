@@ -70,6 +70,12 @@ class PatronList extends React.Component {
                                         Edit Address
                                     </a>
                                 </td>
+                                &nbsp; &nbsp;
+                                <td>
+                                    <a href={`patron-phone-editor.html?id=${patron.id}`}>
+                                        Edit Phone Number
+                                    </a>
+                                </td>
 
                             </tr>
                         )
