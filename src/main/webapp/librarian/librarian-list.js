@@ -4,6 +4,12 @@ class LibrarianList extends React.Component {
         librarians: []
     }
 
+    findAllLibrarians = () =>
+        findAllLibrarians()
+            .then(librarians => this.setState({librarians}))
+
+    componentDidMount = () =>
+        this.findAllLibrarians()
 
     render() {
         return(
