@@ -1,4 +1,4 @@
-class BookList extends React.Component {
+class PatronList extends React.Component {
 
     state = {
         patrons: []
@@ -26,7 +26,7 @@ class BookList extends React.Component {
     render() {
         return(
             <div>
-                <h1>Patrons</h1>
+                <h1>Patrons a</h1>
                 <table>
                     <tbody>
                     {
