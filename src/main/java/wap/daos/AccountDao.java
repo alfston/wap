@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
 @Component
 @RestController
 public class AccountDao {
@@ -17,6 +21,7 @@ public class AccountDao {
   public Iterable<Account> findAllAccounts() {
     return accountRepository.findAll();
   }
+
   @GetMapping("/findAccountByNumber/{number}")
   public Account findAccountByNumber(
           @PathVariable("number") Integer number) {
@@ -40,5 +45,16 @@ public class AccountDao {
     Account account = accountRepository.findById(Number).get();
     account.setState(newState);
     return accountRepository.save(account);
+  }
+
+  @GetMapping("/byLibrary/{number}")
+  public Iterable<Account> byLibrary( @PathVariable("number") Integer number) {
+    ArrayList<Account> loa = new ArrayList<>();
+    for (Account a : accountRepository.findAll()) {
+      if (a.getLibrary() == number) {
+        loa.add(a);
+      }
+    }
+    return loa;
   }
 }
