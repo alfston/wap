@@ -1,6 +1,7 @@
 package wap.models;
 import net.minidev.json.annotate.JsonIgnore;
 
+
 import javax.persistence.*;
 import java.sql.Date;
 

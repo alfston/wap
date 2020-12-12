@@ -1,4 +1,6 @@
+
 class AccountList extends React.Component {
+
     state = {
         accounts: []
     }
@@ -9,33 +11,46 @@ class AccountList extends React.Component {
 
     componentDidMount = () =>
         this.findAllAccounts()
+
     createAccount = () =>
         createAccount()
             .then(this.findAllAccounts)
-    deleteAccount = (number) =>
-        deleteAccount(number)
+
+    deleteAccount = (id) =>
+        deleteAccount(id)
             .then(this.findAllAccounts)
+
     render() {
         return(
             <div>
                 <h1>Account List</h1>
                 <table>
+                    <tbody>
                     {
                         this.state.accounts.map(account =>
-                            <tr key={account.id}>
-
+                            <tr>
                                 <td>
-                                    <button
-                                        onClick={() => this.deleteAccount(account.id)}>
+                                    {account.id} &nbsp; &ndash; &nbsp;
+                                    {account.state} &nbsp;
+                                    {account.item1.toString()} &nbsp; &ndash; &nbsp;
+                                    {account.item2} &nbsp;
+                                </td>
+                                <td>
+                                    <button onClick={() => this.deleteAccount(account.id)}>
                                         Delete
                                     </button>
                                 </td>
-
+                                <td>
+                                    <a href={`account-editor.html?id=${account.id}`}>
+                                        Edit
+                                    </a>
+                                </td>
                             </tr>
                         )
                     }
+                    </tbody>
                 </table>
-                <button onClick={this.createCourse}>
+                <button onClick={this.createAccount}>
                     Create
                 </button>
             </div>
@@ -45,3 +60,4 @@ class AccountList extends React.Component {
 
 ReactDOM.render(
     <AccountList/>, document.getElementById("root"))
+
