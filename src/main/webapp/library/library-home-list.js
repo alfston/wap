@@ -7,6 +7,10 @@ class LibraryList extends React.Component {
       findAllLibraries()
          .then(libraries => this.setState({libraries}))
 
+   byLibrary = (id) =>
+             byLibrary(id)
+               .then(this.byLibraries)
+
    componentDidMount = () =>
       this.findAllLibraries()
 
@@ -19,10 +23,11 @@ class LibraryList extends React.Component {
                 this.state.libraries.map(library =>
                 <tr key={library.id}>
                    <td>
-                       <a href="patron-or-librarian.html">
-                   {library.name}
-                   </a>
+                   <button onClick={this.byLibrary}>
+                       {library.name}
+                       </button>
                    </td>
+
                 </tr>
                 )
              }
