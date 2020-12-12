@@ -19,7 +19,7 @@ class PatronAddressEditorEditor extends React.Component {
     render() {
         return(
             <div className="container">
-                <h1>Patron Editor {this.state.Patron.address}</h1>
+                <h1>Address Editor {this.state.Patron.address}</h1>
                 <input className="form-control" readOnly={true} value={this.state.patron.id}/>
                 <input
                     onChange={(event) => this.setState({
