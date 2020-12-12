@@ -49,19 +49,14 @@ class PatronList extends React.Component {
                     {
                         this.state.patrons.map(patron =>
                             <tr>
-                                <td>
-
-                                    <a href="../item/item-list.html">
-
-                                    </a>
-                                </td>
 
 
+                                &nbsp;
                                     {patron.id} &nbsp; &ndash; &nbsp;
 
 
                                 <td>
-                                    <a href={`item-list.html?id=${patron.id}`}>
+                                    <a href={`../item/item-list.html?id=${patron.id}`}>
                                         View Items
                                     </a>
                                 </td>
@@ -71,8 +66,8 @@ class PatronList extends React.Component {
                                     </button>
                                 </td>
                                 <td>
-                                    <a href={`patron-editor.html?id=${patron.id}`}>
-                                        Edit
+                                    <a href={`patron-address-editor.html?id=${patron.id}`}>
+                                        Edit Address
                                     </a>
                                 </td>
 
