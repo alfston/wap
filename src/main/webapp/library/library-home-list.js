@@ -1,3 +1,4 @@
+
 class LibraryList extends React.Component {
    state = {
       libraries: []
@@ -17,15 +18,17 @@ class LibraryList extends React.Component {
  render() {
    return(
      <div className="container">
-       <h1>Select your library</h1>
+       <h2>Select your library</h2>
        <table>
              {
                 this.state.libraries.map(library =>
                 <tr key={library.id}>
                    <td>
-                   <button onClick={this.byLibrary}>
+
+                   <a href="patron-or-librarian.html">
                        {library.name}
-                       </button>
+                       </a>
+
                    </td>
 
                 </tr>
