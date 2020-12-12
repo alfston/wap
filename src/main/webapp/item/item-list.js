@@ -1,7 +1,4 @@
 class ItemList extends React.Component {
-
-
-
     state = {
         items: []
     }
