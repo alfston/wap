@@ -1,12 +1,23 @@
 class PatronList extends React.Component {
 
+
+
     state = {
         patrons: []
     }
 
+
+
     findAllPatrons = () =>
         findAllPatrons()
             .then(patrons => this.setState({patrons}))
+
+
+
+    componentDidMount = () =>
+        this.findAllPatrons()
+
+
 
     componentDidMount = () =>
         this.findAllPatrons()
@@ -21,21 +32,34 @@ class PatronList extends React.Component {
 
     deletePatron = (id) =>
         deletePatron(id)
-            .then(this.findAllBooks)
+            .then(this.findAllPatrons)
+
 
     render() {
         return(
             <div>
-                <h1>Patrons a</h1>
+
+                <h1>Account Info</h1>
+                <h5> Please Click On Your Account </h5>
+
+                <h1>Patrons</h1>
+
                 <table>
                     <tbody>
                     {
-                        this.state.books.map(patron =>
+                        this.state.patrons.map(patron =>
                             <tr>
                                 <td>
-                                    {patron.id}
 
+                                    <a href="../item/item-list.html">
+
+                                    </a>
                                 </td>
+
+
+                                    {patron.id} &nbsp; &ndash; &nbsp;
+
+
                                 <td>
                                     <a href={`item-list.html?id=${patron.id}`}>
                                         View Items
@@ -51,15 +75,21 @@ class PatronList extends React.Component {
                                         Edit
                                     </a>
                                 </td>
+
                             </tr>
                         )
                     }
                     </tbody>
                 </table>
+
             </div>
         )
     }
 }
 
+
 ReactDOM.render(
     <PatronList/>, document.getElementById("root"))
+
+
+
