@@ -1,45 +1,58 @@
-class LibrarianEditor extends React.Component {
+class LibrarianList extends React.Component {
 
     state = {
-        librarian: {}
+        librarians: []
     }
 
-    findLibrarianById = (id) =>
-        findLibrarianById(id)
-            .then(librarian => this.setState({librarian}))
+    findAllLibrarians = () =>
+        findAllLibrarians()
+            .then(librarians => this.setState({librarians}))
 
-    componentDidMount = () => {
-        const id = window.location.search.split("=")[1]
-        this.findLibrarianById(id)
-    }
+    componentDidMount = () =>
+        this.findAllLibrarians()
 
-    saveLibrarian = () =>
-        renameLibrarianPosition(this.state.librarian)
+    //createLibrarian = () =>
+    //  createLibrarian()
+    //    .then(this.findAllLibrarians)
+
+    deleteLibrarian = (id) =>
+        deleteLibrarian(id)
+            .then(this.findAllLibrarians)
 
     render() {
         return(
-            <div className="container">
-                <h1>Librarian Editor {this.state.librarian.position}</h1>
-                <input className="form-control" readOnly={true} value={this.state.librarian.id}/>
-                <input
-                    onChange={(event) => this.setState({
-                        librarian: {
-                            ...this.state.librarian,
-                            position: event.target.value
+            <div>
+                <h1>Librarians</h1>
+                <table>
+                    <tbody>
+                        {
+                            this.state.librarians.map(librarian =>
+                                <tr>
+                                    <td>
+                                        {librarian.id}
+                                    </td>
+                                    <td>
+                                        {librarian.position}
+                                    </td>
+                                    <td>
+                                        <button onClick={() => this.deleteLibrarian(Librarian.id)}>
+                                            Delete
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <a href={`librarian-editor.html?id=${librarian.id}`}>
+                                            Edit
+                                        </a>
+                                    </td>
+                                </tr>
+                            )
                         }
-                    })}
-                    className="form-control"
-                    value={this.state.librarian.position}/>
-                <button onClick={this.saveLibrarian}>
-                    Save
-                </button>
-                <a href="librarian-list.html">
-                    Done
-                </a>
+                    </tbody>
+                </table>
             </div>
         )
     }
 }
 
 ReactDOM.render(
-    <LibrarianEditor/>, document.getElementById("root"))
+    <LibrarianList/>, document.getElementById("root"))
