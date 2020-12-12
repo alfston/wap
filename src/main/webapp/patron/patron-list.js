@@ -52,12 +52,12 @@ class PatronList extends React.Component {
                                 <td>
 
                                     <a href="../item/item-list.html">
-                                        {patron.id}
+
                                     </a>
                                 </td>
 
 
-                                    {patron.id}
+                                    {patron.id} &nbsp; &ndash; &nbsp;
 
                            
                                 <td>
