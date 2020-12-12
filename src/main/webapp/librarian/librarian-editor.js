@@ -11,9 +11,9 @@ class LibrarianList extends React.Component {
     componentDidMount = () =>
         this.findAllLibrarians()
 
-    //createLibrarian = () =>
-    //  createLibrarian()
-    //    .then(this.findAllLibrarians)
+    createLibrarian = () =>
+      createLibrarian()
+        .then(this.findAllLibrarians)
 
     deleteLibrarian = (id) =>
         deleteLibrarian(id)
