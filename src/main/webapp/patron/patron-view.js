@@ -15,7 +15,7 @@ class PatronView extends React.Component {
     }
 }
 
- 
+
 ReactDOM.render(
     <PatronView/>, document.getElementById("root"))
 

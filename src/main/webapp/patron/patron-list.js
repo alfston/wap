@@ -59,7 +59,7 @@ class PatronList extends React.Component {
 
                                     {patron.id}
 
-                                </td>
+                           
                                 <td>
                                     <a href={`item-list.html?id=${patron.id}`}>
                                         View Items
