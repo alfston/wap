@@ -22,9 +22,10 @@ public class Account {
  // @ManyToOne
  // @JoinColumn(name="id")
  // @JsonIgnore
-  //private Library library;
- // @OneToMany (mappedby = "patron")
- // private Patron patron;
+  private Integer library_id;
+ //@OneToMany (mappedby = "patron")
+  private Integer patron_id;
+
 
 
 
@@ -94,5 +95,20 @@ public class Account {
   }
 
 
+  public Integer getLibrary() {
+    return library_id;
+  }
+
+  public void setLibrary(Integer library) {
+    this.library_id = library;
+  }
+
+  public Integer getPatron_id() {
+    return patron_id;
+  }
+
+  public void setPatron_id(Integer patron_id) {
+    this.patron_id = patron_id;
+  }
 }
 

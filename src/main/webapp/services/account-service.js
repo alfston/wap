@@ -2,6 +2,7 @@ const FIND_ALL_ACCOUNTS = "http://localhost:8080/findAllAccounts"
 const CREATE_ACCOUNT_URL = "http://localhost:8080/createAccount"
 const DELETE_ACCOUNT_URL = "http://localhost:8080/deleteAccount"
 const CHANGE_STATE = "http://localhost:8080/changeAccountState"
+const BY_LIBRARY = "http://localhost:8080/byLibrary"
 
 const findAllAccounts = () =>
     fetch(`${FIND_ALL_ACCOUNTS}`)
@@ -14,6 +15,11 @@ const createAccount = () =>
 const deleteAccount = (id) =>
     fetch(`${DELETE_ACCOUNT_URL}/${number}`)
 
+const byLibrary = (id) =>
+            fetch(`${BY_LIBRARY}/${id}`)
+                .then(response => response.json())
+
 const changeAccountState = (account) =>
     fetch(`${CHANGE_STATE}/${account.number}/${account.state()}`)
         .then(response => response.json())
+
