@@ -29,8 +29,9 @@ class AccountList extends React.Component {
                     <tbody>
                     {
                         this.state.accounts.map(account =>
-                            <tr>
+                            <tr key={account.id}>
                                 <td>
+
                                     {account.id} &nbsp;
                                     {account.state} &nbsp;
                                     {account.item1} &nbsp;
@@ -38,7 +39,14 @@ class AccountList extends React.Component {
                                     {account.item3} &nbsp;
 
 
+
+                                    {account.id} &nbsp; &ndash; &nbsp;
+                                      {account.state} &nbsp;
+                                      {account.item1.toString()} &nbsp; &ndash; &nbsp;
+                                      {account.item2} &nbsp;
+
                                 </td>
+
                                 <td>
                                     <button onClick={() => this.deleteAccount(account.id)}>
                                         Delete
