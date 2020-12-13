@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+    <title >Home</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+    <script src="../services/library-service.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Home</h1>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <a href="course-list/course-list.html">Courses</a>
-            </li>
-            <li class="list-group-item">
-                <a href="section-list/section-list.html">Sections</a>
-            </li>
-        </ul>
-    </div>
+
+<h1 style="margin-top:60; margin-left:60;">Home</h1>
+
+<div id="root"></div>
+
+<script src="index.js" type="text/babel"></script>
 </body>
 </html>

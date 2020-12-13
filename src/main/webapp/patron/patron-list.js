@@ -57,7 +57,7 @@ class PatronList extends React.Component {
 
                                 <td>
 
-                                    <a href={`../findAccountByNumber/${patron.id}`}>
+                                    <a href={`../byPatron/${patron.id}`}>
                                         View Account
                                     </a>
                                 </td>

@@ -57,4 +57,15 @@ public class AccountDao {
     }
     return loa;
   }
+
+  @GetMapping("/byPatron/{number}")
+  public Iterable<Account> byPatron( @PathVariable("number") Integer number) {
+    ArrayList<Account> loa = new ArrayList<>();
+    for (Account a : accountRepository.findAll()) {
+      if (a.getPatron_id() == number) {
+        loa.add(a);
+      }
+    }
+    return loa;
+  }
 }

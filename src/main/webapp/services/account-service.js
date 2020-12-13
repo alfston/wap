@@ -4,6 +4,7 @@ const CREATE_ACCOUNT_URL = "http://localhost:8080/createAccount"
 const DELETE_ACCOUNT_URL = "http://localhost:8080/deleteAccount"
 const CHANGE_STATE = "http://localhost:8080/changeAccountState"
 const BY_LIBRARY = "http://localhost:8080/byLibrary"
+const BY_PATRON = "http://localhost:8080/byPatron"
 
 const findAllAccounts = () =>
     fetch(`${FIND_ALL_ACCOUNTS}`)
@@ -23,6 +24,11 @@ const deleteAccount = (id) =>
 const byLibrary = (id) =>
             fetch(`${BY_LIBRARY}/${id}`)
                 .then(response => response.json())
+
+const byPatron = (id) =>
+            fetch(`${BY_PATRON}/${id}`)
+                .then(response => response.json())
+
 
 const changeAccountState = (account) =>
     fetch(`${CHANGE_STATE}/${account.number}/${account.state()}`)
