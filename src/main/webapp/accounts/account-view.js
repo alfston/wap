@@ -4,13 +4,13 @@ class AccountView extends React.Component {
         account: {}
     }
 
-    findAccountById = (id) =>
-        findAccountById(id)
+    findAccountById = (number) =>
+        findAccountById(number)
             .then(account => this.setState({account}))
 
     componentDidMount = () => {
-        const id = window.location.search.split("=")[1]
-        this.findAccountById(id)
+        const number = window.location.search.split("=")[1]
+        this.findAccountById(number)
     }
 
 
@@ -19,7 +19,7 @@ class AccountView extends React.Component {
         return(
             <div className="container">
                 <h1>Account Info</h1>
-                <input className="form-control" readOnly={true} value={this.state.account.id}/>
+                <input className="form-control" readOnly={true} value={this.state.account.number}/>
                 <input className="form-control" readOnly={true} value={this.state.account.opened}/>
                 <input className="form-control" readOnly={true} value={this.state.account.state}/>
 
