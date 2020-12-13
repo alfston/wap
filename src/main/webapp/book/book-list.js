@@ -39,7 +39,7 @@ class BookList extends React.Component {
                                 </td>
                                 <td>
                                     <button
-                                        onClick={() => this.deleteBook(book.id)}>
+                                        onClick={() => this.deleteBook(book.isbn)}>
                                         Delete
                                     </button>
                                 </td>

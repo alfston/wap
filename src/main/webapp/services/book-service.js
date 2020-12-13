@@ -10,7 +10,7 @@ const findAllBooks = () =>
         .then(response => response.json())
 
 const findBookByISBN = (id) =>
-    fetch(`${FIND_Book_BY_ISBN}/${id}`)
+    fetch(`${FIND_BOOK_BY_ISBN}/${id}`)
         .then(response => response.json())
 
 const createBook = () =>
