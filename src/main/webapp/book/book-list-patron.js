@@ -11,12 +11,6 @@ class BookList extends React.Component {
     componentDidMount = () =>
         this.findAllBooks()
 
-    createBook = () =>
-        createBook()
-            .then(this.findAllBooks)
-    deleteBook = (id) =>
-        deleteBook(id)
-            .then(this.findAllBooks)
 
 
     render() {
@@ -34,30 +28,17 @@ class BookList extends React.Component {
                                     {book.subject} &nbsp; &ndash; &nbsp;
                                     {book.publisher} &nbsp; &ndash; &nbsp;
                                     <a href={`../findAuthorById/${book.authorId}`}>
-                                                                                                                                                                                           {book.authorId}
-                                     </a>
-                                </td>
-                                <td>
-                                    <button
-                                        onClick={() => this.deleteBook(book.id)}>
-                                        Delete
-                                    </button>
-                                </td>
-
-                                <td>
-                                    <a href={`book-editor.html?id=${book.isbn}`}>
-                                        Edit
+                                        {book.authorId}
                                     </a>
                                 </td>
+
 
                             </tr>
                         )
                     }
                     </tbody>
                 </table>
-                <button onClick={this.createBook}>
-                    Create
-                </button>
+
             </div>
         )
     }
