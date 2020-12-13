@@ -30,7 +30,7 @@ class BookList extends React.Component {
                                     {book.name} &nbsp; &ndash; &nbsp;
                                     {book.subject} &nbsp; &ndash; &nbsp;
                                     {book.publisher} &nbsp; &ndash; &nbsp;
-                                    <a href="../author/author-list.html">
+                                    <a href="../findAuthorById/" + {book.authorId} >
                                                                                                                                                        {book.authorId}
                                      </a>
                                 </td>
