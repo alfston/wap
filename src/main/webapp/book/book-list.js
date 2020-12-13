@@ -1,12 +1,12 @@
 class BookList extends React.Component {
 
     state = {
-        book: []
+        books: []
     }
 
     findAllBooks = () =>
         findAllBooks()
-            .then(book => this.setState({book}))
+            .then(books => this.setState({books}))
 
     componentDidMount = () =>
         this.findAllBooks()
@@ -23,7 +23,7 @@ class BookList extends React.Component {
                 <table>
                     <tbody>
                     {
-                        this.state.book.map(book =>
+                        this.state.books.map(book =>
                             <tr>
                                 <td>
                                     {book.id} &nbsp; &ndash; &nbsp;
