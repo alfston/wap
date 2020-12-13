@@ -1,11 +1,14 @@
 package wap.daos;
 
+import wap.models.Account;
 import wap.models.Book;
 import wap.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
 
 @RestController
 public class BookDao {
@@ -38,5 +41,16 @@ public class BookDao {
     Book book = bookRepository.findById(ISBN).get();
     book.setName(newName);
     return bookRepository.save(book);
+  }
+
+  @GetMapping("/byAuthor/{number}")
+  public Iterable<Book> byAuthor(@PathVariable("number") Integer number) {
+    ArrayList<Book> lob = new ArrayList<>();
+    for (Book a : bookRepository.findAll()) {
+      if (a.getAuthorId().equals(number.toString())) {
+        lob.add(a);
+      }
+    }
+    return lob;
   }
 }
