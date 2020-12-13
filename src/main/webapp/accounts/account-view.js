@@ -4,13 +4,13 @@ class AccountView extends React.Component {
         account: {}
     }
 
-    findAccountById = (number) =>
-        findAccountById(number)
+    findAccountByNumber = (number) =>
+        findAccountByNumber(number)
             .then(account => this.setState({account}))
 
     componentDidMount = () => {
         const number = window.location.search.split("=")[1]
-        this.findAccountById(number)
+        this.findAccountByNumber(number)
     }
 
 
@@ -32,5 +32,5 @@ class AccountView extends React.Component {
 }
 
 ReactDOM.render(
-    <AccountEditor/>, document.getElementById("root"))
+    <AccountView/>, document.getElementById("root"))
 

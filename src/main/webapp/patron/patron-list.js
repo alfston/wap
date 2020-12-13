@@ -1,5 +1,5 @@
 class PatronList extends React.Component {
-
+//{<a href={`../account/account-view.html?id=${patron.id}`}>}
 
 
     state = {
@@ -56,7 +56,8 @@ class PatronList extends React.Component {
 
 
                                 <td>
-                                    <a href={`../account/account-view.html?id=${patron.id}`}>
+
+                                    <a href={`../findAccountByNumber/${patron.id}`}>
                                         View Account
                                     </a>
                                 </td>
