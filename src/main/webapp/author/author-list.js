@@ -46,7 +46,7 @@ class AuthorList extends React.Component {
                                 </td>
                                 <td>
                                    <a href={`../byAuthor/${author.id}`}>
-                                      Search books by {author.name} Author
+                                      Search books by {author.name}
                                    </a>
                                 </td>
                             </tr>
