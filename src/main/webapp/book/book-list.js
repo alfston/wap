@@ -55,6 +55,9 @@ class BookList extends React.Component {
                 <button onClick={this.createBook}>
                     Create
                 </button>
+                <a href="../author/author-list.html">
+                <h2> Search by Author </h2>
+                </a>
             </div>
         )
     }

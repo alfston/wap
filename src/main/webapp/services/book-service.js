@@ -3,6 +3,7 @@ const FIND_USER_BY_ISBN = "http://localhost:8080/findUserByISBN"
 const CREATE_BOOK_URL = "http://localhost:8080/createBook"
 const DELETE_BOOK_URL = "http://localhost:8080/deleteBook"
 const RENAME_BOOK = "http://localhost:8080/renameBook"
+const BY_AUTHOR = "http://localhost:8080/byAuthor"
 
 const findAllBooks = () =>
     fetch(`${FIND_ALL_BOOKS}`)
@@ -22,3 +23,7 @@ const deleteBook = (id) =>
 const renameUser = (user) =>
     fetch(`${RENAME_BOOK}/${user.id}/${user.role}`)
         .then(response => response.json())
+
+const byAuthor = (id) =>
+    fetch(`${BY_AUTHOR}/${id}`)
+         .then(response => response.json())

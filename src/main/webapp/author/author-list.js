@@ -32,6 +32,7 @@ class AuthorList extends React.Component {
                                     {author.id} &nbsp; &ndash; &nbsp;
                                     {author.name} &nbsp; &ndash; &nbsp;
                                     {author.biography} &nbsp;
+
                                 </td>
                                 <td>
                                     <button onClick={() => this.deleteAuthor(author.id)}>
@@ -42,6 +43,11 @@ class AuthorList extends React.Component {
                                     <a href={`author-editor.html?id=${author.id}`}>
                                         Edit
                                     </a>
+                                </td>
+                                <td>
+                                   <a href={`../byAuthor/${author.id}`}>
+                                       Search
+                                   </a>
                                 </td>
                             </tr>
                         )

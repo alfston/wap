@@ -6,41 +6,29 @@ class AuthorEditor extends React.Component {
 
     findAuthorById = (id) =>
         findAuthorById(id)
-            .then(account => this.setState({account}))
+            .then(author => this.setState({author}))
 
     componentDidMount = () => {
         const id = window.location.search.split("=")[1]
-        this.findAccountById(id)
+        this.findAuthorById(id)
     }
 
-    saveAccount = () =>
-        renameAccount(this.state.account)
+
 
     render() {
         return(
             <div className="container">
-                <h1>Account Editor {this.state.account.role}</h1>
-                <input className="form-control" readOnly={true} value={this.state.account.id}/>
-                <input
-                    onChange={(event) => this.setState({
-                        account: {
-                            ...this.state.account,
-                            role: event.target.value
-                        }
-                    })}
-                    className="form-control"
-                    value={this.state.account.state}/>
-                <button onClick={this.saveAccount}>
-                    Save
-                </button>
-                <a href="account-list.html">
-                    Done
+                <h1>Author</h1>
+
+
+                <a href="author-list.html">
+                    View All Authors
                 </a>
             </div>
-        )
+
     }
 }
 
 ReactDOM.render(
-    <AccountEditor/>, document.getElementById("root"))
+    <AuthorEditor/>, document.getElementById("root"))
 
