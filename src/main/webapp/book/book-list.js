@@ -29,8 +29,13 @@ class BookList extends React.Component {
                                     {book.isbn} &nbsp; &ndash; &nbsp;
                                     {book.name} &nbsp; &ndash; &nbsp;
                                     {book.subject} &nbsp; &ndash; &nbsp;
-                                    {book.publisher} &nbsp;
+                                    {book.publisher} &nbsp; &ndash; &nbsp;
+                                    <a href="../author/author-list.html">
+                                                                                                                                                       {book.authorId}
+                                     </a>
                                 </td>
+
+
                                 {/*// <td>*/}
                                 {/*//     <button onClick={() => this.deleteUser(user.id)}>*/}
                                 {/*//         Delete*/}
@@ -41,6 +46,7 @@ class BookList extends React.Component {
                                         Edit
                                     </a>
                                 </td>
+
                             </tr>
                         )
                     }

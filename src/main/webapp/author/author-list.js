@@ -29,9 +29,9 @@ class AuthorList extends React.Component {
                         this.state.authors.map(author =>
                             <tr>
                                 <td>
-                                    {author.id}
-                                    {author.name} ;
-                                    {author.biography};
+                                    {author.id} &nbsp; &ndash; &nbsp;
+                                    {author.name} &nbsp; &ndash; &nbsp;
+                                    {author.biography} &nbsp;
                                 </td>
                                 <td>
                                     <button onClick={() => this.deleteAuthor(author.id)}>

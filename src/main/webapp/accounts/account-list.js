@@ -35,7 +35,7 @@ class AccountList extends React.Component {
                                     {account.number} &nbsp;
                                     {account.state} &nbsp;
                                     {account.item1} &nbsp;
-                                    {account.item2} &nbsp;
+                                        {account.item2} &nbsp;
                                     {account.item3} &nbsp;
 
                                 </td>
