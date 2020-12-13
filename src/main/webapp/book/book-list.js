@@ -26,7 +26,7 @@ class BookList extends React.Component {
                         this.state.books.map(book =>
                             <tr>
                                 <td>
-                                    {book.id} &nbsp; &ndash; &nbsp;
+                                    {book.isbn} &nbsp; &ndash; &nbsp;
                                     {book.name} &nbsp;
                                 </td>
                                 {/*// <td>*/}
@@ -35,7 +35,7 @@ class BookList extends React.Component {
                                 {/*//     </button>*/}
                                 {/*// </td>*/}
                                 <td>
-                                    <a href={`book-editor.html?id=${book.id}`}>
+                                    <a href={`book-editor.html?id=${book.isbn}`}>
                                         Edit
                                     </a>
                                 </td>
