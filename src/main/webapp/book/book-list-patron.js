@@ -23,11 +23,19 @@ class BookList extends React.Component {
                         this.state.books.map(book =>
                             <tr>
                                 <td>
-                                    {book.isbn} &nbsp; &ndash; &nbsp;
-                                    {book.name} &nbsp; &ndash; &nbsp;
-                                    {book.subject} &nbsp; &ndash; &nbsp;
-                                    {book.publisher} &nbsp; &ndash; &nbsp;
-                                    <a href={`../findAuthorById/${book.authorId}`}>
+                                    <th>ISBN</th>{book.isbn} &nbsp; &ndash; &nbsp;
+                                </td>
+                                <td>
+                                    <th>Name</th>{book.name} &nbsp; &ndash; &nbsp;
+                                </td>
+                                <td>
+                                    <th>Subject</th>{book.subject} &nbsp; &ndash; &nbsp;
+                                </td>
+                                <td>
+                                    <th>Publisher</th>{book.publisher} &nbsp; &ndash; &nbsp;
+                                </td>
+                                <td>
+                                    <th>AuthorID</th><a href={`../findAuthorById/${book.authorId}`}>
                                         {book.authorId}
                                     </a>
                                 </td>

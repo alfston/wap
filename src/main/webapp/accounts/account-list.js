@@ -31,7 +31,7 @@ class AccountList extends React.Component {
                         this.state.accounts.map(account =>
                             <tr>
                                 <td>
-                                    <th>Acct </th>{account.number} &nbsp;
+                                    <th>Acct</th>{account.number} &nbsp;
                                 </td>
                                 <td>
                                     <th>State</th>{account.state} &nbsp;

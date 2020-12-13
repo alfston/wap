@@ -25,11 +25,15 @@ class LibrarianList extends React.Component {
                     {
                         this.state.librarian.map(librarian =>
                             <tr>
+
                                 <td>
-                                    {librarian.id} &nbsp; &ndash; &nbsp;
-                                    {librarian.position} &nbsp;
+                                    <th>ID</th>{librarian.id} &nbsp; &ndash; &nbsp;
                                 </td>
-                                {/*// <td>*/}
+                                <td>
+                                    <th>Position</th>{librarian.position} &nbsp;
+                                </td>
+                                {/*// <td>
+                                */}
                                 {/*//     <button onClick={() => this.deleteUser(user.id)}>*/}
                                 {/*//         Delete*/}
                                 {/*//     </button>*/}

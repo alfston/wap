@@ -29,9 +29,13 @@ class AuthorList extends React.Component {
                         this.state.authors.map(author =>
                             <tr>
                                 <td>
-                                    {author.id} &nbsp; &ndash; &nbsp;
-                                    {author.name} &nbsp; &ndash; &nbsp;
-                                    {author.biography} &nbsp;
+                                    <th>ID</th>{author.id} &nbsp; &ndash; &nbsp;
+                                </td>
+                                <td>
+                                    <th>Name</th>{author.name} &nbsp; &ndash; &nbsp;
+                                </td>
+                                <td>
+                                    <th>Author Bio</th>{author.biography} &nbsp;
 
                                 </td>
                                 <td>

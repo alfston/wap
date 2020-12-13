@@ -49,12 +49,10 @@ class PatronList extends React.Component {
                     {
                         this.state.patrons.map(patron =>
                             <tr>
-
-
+                                <td>
                                 &nbsp;
-                                    {patron.id} &nbsp; &ndash; &nbsp;
-
-
+                                    <th>ID</th>{patron.id} &nbsp; &ndash; &nbsp;
+                                </td>
                                 <td>
 
                                     <a href={`../byPatron/${patron.id}`}>
