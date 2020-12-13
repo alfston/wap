@@ -27,8 +27,8 @@ class BookList extends React.Component {
                             <tr>
                                 <td>
                                     {book.isbn} &nbsp; &ndash; &nbsp;
-                                    {book.name} &nbsp;
-                                    {book.subject} &nbsp;
+                                    {book.name} &nbsp; &ndash; &nbsp;
+                                    {book.subject} &nbsp; &ndash; &nbsp;
                                     {book.publisher} &nbsp;
                                 </td>
                                 {/*// <td>*/}
