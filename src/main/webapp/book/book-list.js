@@ -28,6 +28,8 @@ class BookList extends React.Component {
                                 <td>
                                     {book.isbn} &nbsp; &ndash; &nbsp;
                                     {book.name} &nbsp;
+                                    {book.subject} &nbsp;
+                                    {book.publisher} &nbsp;
                                 </td>
                                 {/*// <td>*/}
                                 {/*//     <button onClick={() => this.deleteUser(user.id)}>*/}
