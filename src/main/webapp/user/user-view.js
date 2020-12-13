@@ -29,16 +29,26 @@ class UserView extends React.Component {
                         this.state.users.map(user =>
                             <tr>
                                 <td>
-                                    {user.id} &nbsp; &ndash; &nbsp;
-                                    {user.first_name} &nbsp;
-                                    {user.last_name} &nbsp; &ndash; &nbsp;
-                                    {user.role} &nbsp;
+
+                                    <th>ID</th>{user.id} &nbsp; &ndash; &nbsp;
+                                </td>
+                                <td>
+                                    <th>First</th>{user.first_name} &nbsp;
+                                </td>
+                                <td>
+                                    <th>Last</th>{user.last_name} &nbsp; &ndash; &nbsp;
+                                </td>
+                                <td>
+                                    <th>Role</th>{user.role} &nbsp;
                                 </td>
                             </tr>
                         )
                     }
                     </tbody>
                 </table>
+                <a href="../librarian/Home.html">
+                    Back
+                </a>
 
             </div>
         )
