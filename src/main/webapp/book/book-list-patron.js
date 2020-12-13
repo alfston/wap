@@ -38,6 +38,9 @@ class BookList extends React.Component {
                     }
                     </tbody>
                 </table>
+                <a href="../author/author-patron-list.html">
+                                <h2> Search by Author </h2>
+                                </a>
 
             </div>
         )
