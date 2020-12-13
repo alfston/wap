@@ -40,13 +40,13 @@ class AuthorList extends React.Component {
                                     </button>
                                 </td>
                                 <td>
-                                    <a href={`author-editor.html?id=${author.id}`}>
-                                        Edit
+                                    <a href={`author-editor.html/${author.id}`}>
+                                        Edit &nbsp;
                                     </a>
                                 </td>
                                 <td>
                                    <a href={`../byAuthor/${author.id}`}>
-                                       Search
+                                      Search by Author
                                    </a>
                                 </td>
                             </tr>
