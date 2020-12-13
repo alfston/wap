@@ -31,13 +31,19 @@ class AccountList extends React.Component {
                         this.state.accounts.map(account =>
                             <tr>
                                 <td>
-
-                                    {account.number} &nbsp;
-                                    {account.state} &nbsp;
-                                    {account.item1} &nbsp;
-                                        {account.item2} &nbsp;
-                                    {account.item3} &nbsp;
-
+                                    <th>Acct </th>{account.number} &nbsp;
+                                </td>
+                                <td>
+                                    <th>State</th>{account.state} &nbsp;
+                                </td>
+                                <td>
+                                    <th>Item 1</th>{account.item1} &nbsp;
+                                </td>
+                                <td>
+                                    <th>Item 2</th>{account.item2} &nbsp;
+                                </td>
+                                <td>
+                                    <th>Item 3</th>{account.item3} &nbsp;
                                 </td>
 
                                 <td>
