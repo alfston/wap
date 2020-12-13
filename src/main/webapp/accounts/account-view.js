@@ -13,26 +13,16 @@ class AccountView extends React.Component {
         this.findAccountById(id)
     }
 
-    saveAccount = () =>
-        renameAccount(this.state.account)
+
 
     render() {
         return(
             <div className="container">
-                <h1>Account view {this.state.account.role}</h1>
+                <h1>Account Info</h1>
                 <input className="form-control" readOnly={true} value={this.state.account.id}/>
-                <input
-                    onChange={(event) => this.setState({
-                        account: {
-                            ...this.state.account,
-                            role: event.target.value
-                        }
-                    })}
-                    className="form-control"
-                    value={this.state.account.state}/>
-                <button onClick={this.saveAccount}>
-                    Save
-                </button>
+                <input className="form-control" readOnly={true} value={this.state.account.opened}/>
+                <input className="form-control" readOnly={true} value={this.state.account.state}/>
+
                 <a href="../patron/patron-list.html">
                     Done
                 </a>
