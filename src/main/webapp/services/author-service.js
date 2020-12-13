@@ -8,7 +8,7 @@ const findAllAuthors = () =>
     fetch(`${FIND_ALL_AUTHORS}`)
         .then(response => response.json())
 
-const findUserByISBN = (id) =>
+const findAuthorById = (id) =>
     fetch(`${FIND_AUTHOR_BY_ID}/${id}`)
         .then(response => response.json())
 
