@@ -13,19 +13,19 @@ class PatronPhoneEditor extends React.Component {
         this.findPatronById(id)
     }
 
-    Patron = () =>
+    savePatron = () =>
         renamePhoneNumber(this.state.patron)
 
     render() {
         return(
             <div className="container">
-                <h1>Phone Number Editor {this.state.Patron.phone_number}</h1>
+                <h1>Phone Number Editor {this.state.patron.id}</h1>
                 <input className="form-control" readOnly={true} value={this.state.patron.id}/>
                 <input
                     onChange={(event) => this.setState({
                         patron: {
                             ...this.state.patron,
-                            phone_number: event.target.value
+                            phone_number : event.target.value
                         }
                     })}
                     className="form-control"
