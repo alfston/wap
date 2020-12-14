@@ -63,7 +63,7 @@ class BookList extends React.Component {
                     }
                     </tbody>
                 </table>
-                <button onClick={this.createBook}>
+                <button onClick={this.createBook()}>
                     Create
                 </button>
                 <a href="../author/author-list.html">

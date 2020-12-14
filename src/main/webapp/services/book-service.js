@@ -21,7 +21,7 @@ const deleteBook = (id) =>
     fetch(`${DELETE_BOOK_URL}/${id}`)
 
 const renameBook = (user) =>
-    fetch(`${RENAME_BOOK}/${user.id}/${user.role}`)
+    fetch(`${RENAME_BOOK}/${book.id}/${book.name}`)
         .then(response => response.json())
 
 const byAuthor = (id) =>

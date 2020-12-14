@@ -5,18 +5,18 @@ import javax.persistence.*;
 @Table(name="books")
 public class Book {
   @Id
-  private Integer ISBN;
+  private String ISBN;
   private String name;
   private String subject; //comment
   private String publisher;
   private String publicationDate;
   private String authorId;
 
-  public Integer getISBN() {
+  public String getISBN() {
     return ISBN;
   }
 
-  public void setISBN(Integer ISBN) {
+  public void setISBN(String ISBN) {
     this.ISBN = ISBN;
   }
 

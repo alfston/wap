@@ -29,7 +29,9 @@ public class UserDao {
   @GetMapping("/createUser")
   public User createUser() {
     User user = new User();
-    user.setRole("New User");
+    user.setRole("New Role");
+    user.setFirst_name("New First Name");
+    user.setLast_name("New Last Name");
     return userRepository.save(user);
   }
   @GetMapping("/renameUser/{id}/{newRole}")

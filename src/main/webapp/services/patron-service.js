@@ -1,6 +1,5 @@
-
 const FIND_ALL_PATRONS = "http://localhost:8080/findAllPatrons"
-const FIND_PATRON_BY_ID = "http://localhost:8080/findPatronnById"
+const FIND_PATRON_BY_ID = "http://localhost:8080/findPatronById"
 const DELETE_PATRON_URL = "http://localhost:8080/deletePatron"
 const RENAME_ADDRESS = "http://localhost:8080/renameAddress"
 const RENAME_PHONE_NUMBER = "http://localhost:8080/renamePhoneNumber"
@@ -21,5 +20,5 @@ const renameAddress = (patron) =>
         .then(response => response.json())
 
 const renamePhoneNumber = (patron) =>
-    fetch(`${RENAME_PHONE_NUMBER}/${patron.id}/${patron.phoneNumber}`)
+    fetch(`${RENAME_PHONE_NUMBER}/${patron.id}/${patron.phone_number}`)
         .then(response => response.json())

@@ -28,10 +28,11 @@ public class BookDao {
           @PathVariable("ISBN") Integer ISBN) {
     bookRepository.deleteById(ISBN);
   }
-  @GetMapping("/createBook")
+  @GetMapping("/createBook/")
   public Book createBook() {
     Book book = new Book();
     book.setName("New Book");
+    book.setISBN("New ISBN");
     return bookRepository.save(book);
   }
   @GetMapping("/renameBook/{ISBN}/{newName}")

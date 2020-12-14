@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import wap.repositories.LibrarianRepository;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 @RestController
 public class LibrarianDao {
   @Autowired
@@ -19,6 +22,15 @@ public class LibrarianDao {
           @PathVariable("id")Integer id) {
     return librarianRepository.findById(id).get();
   }
+  @GetMapping("/createLibrarian")
+  public Librarian createLibrarian() {
+    Librarian librarian = new Librarian();
+    librarian.setPosition("New Position");
+
+    return librarianRepository.save(librarian);
+  }
+
+
   @GetMapping("/deleteLibrarian/{id}")
   public void deleteLibrarian(
           @PathVariable("id")Integer id) {

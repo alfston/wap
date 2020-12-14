@@ -13,13 +13,13 @@ class PatronAddressEditor extends React.Component {
         this.findPatronById(id)
     }
 
-    Patron = () =>
+    savePatron = () =>
         renameAddress(this.state.patron)
 
     render() {
         return(
             <div className="container">
-                <h1>Address Editor {this.state.Patron.address}</h1>
+                <h1>Address Editor {this.state.patron.address}</h1>
                 <input className="form-control" readOnly={true} value={this.state.patron.id}/>
                 <input
                     onChange={(event) => this.setState({

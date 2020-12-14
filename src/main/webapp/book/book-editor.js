@@ -25,7 +25,7 @@ class BookEditor extends React.Component {
                     onChange={(event) => this.setState({
                         book: {
                             ...this.state.book,
-                            role: event.target.value
+                            name: event.target.value
                         }
                     })}
                     className="form-control"
