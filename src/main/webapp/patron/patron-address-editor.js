@@ -1,4 +1,4 @@
-class PatronPhoneEditor extends React.Component {
+class PatronAddressEditor extends React.Component {
 
     state = {
         patron: {}
@@ -19,7 +19,7 @@ class PatronPhoneEditor extends React.Component {
     render() {
         return(
             <div className="container">
-                <h1>Phone Number Editor {this.state.patron.id}</h1>
+                <h1>Phone Address Editor {this.state.patron.id}</h1>
                 <input className="form-control" readOnly={true} value={this.state.patron.id}/>
                 <input
                     onChange={(event) => this.setState({
@@ -40,3 +40,6 @@ class PatronPhoneEditor extends React.Component {
         )
     }
 }
+
+ReactDOM.render(
+    <PatronAddressEditor/>, document.getElementById("root"))
