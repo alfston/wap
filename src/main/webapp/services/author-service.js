@@ -1,5 +1,5 @@
 const FIND_ALL_AUTHORS = "http://localhost:8080/findAllAuthors"
-const FIND_AUTHOR_BY_ID = "http://localhost:8080/findUserByISBN"
+const FIND_AUTHOR_BY_ID = "http://localhost:8080/findAuthorById"
 const CREATE_AUTHOR_URL = "http://localhost:8080/createAuthor"
 const DELETE_AUTHOR_URL = "http://localhost:8080/deleteAuthor"
 const REWRITE_BIOGRAPGHY = "http://localhost:8080/rewriteBiography"
