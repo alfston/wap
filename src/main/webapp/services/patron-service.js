@@ -21,5 +21,5 @@ const renameAddress = (patron) =>
         .then(response => response.json())
 
 const renamePhoneNumber = (patron) =>
-    fetch(`${RENAME_PHONE_NUMBER}/${patron.id}/${patron.phoneNumber}`)
+    fetch(`${RENAME_PHONE_NUMBER}/${patron.id}/${patron.phone_number}`)
         .then(response => response.json())
