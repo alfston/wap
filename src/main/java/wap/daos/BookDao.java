@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 @RestController
 public class BookDao {
@@ -32,7 +33,7 @@ public class BookDao {
   public Book createBook() {
     Book book = new Book();
     book.setName("New Book");
-    book.setISBN("New ISBN");
+    book.setISBN("New Book" + (new Date()).getTime());
     return bookRepository.save(book);
   }
   @GetMapping("/renameBook/{ISBN}/{newName}")
