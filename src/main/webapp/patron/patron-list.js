@@ -34,6 +34,9 @@ class PatronList extends React.Component {
         deletePatron(id)
             .then(this.findAllPatrons)
 
+    createAccount = () =>
+        createAccount()
+            .then(this.findAllPatrons)
 
     render() {
         return(
@@ -41,7 +44,9 @@ class PatronList extends React.Component {
 
                 <h1>Account Info</h1>
                 <h5> Please Click On Your Account </h5>
-
+                    <a href="../accounts/account-list.html">
+                         <h5>New User? Create an account</h5>
+                    </a>
                 <h1>Patrons</h1>
 
                 <table>
@@ -80,6 +85,7 @@ class PatronList extends React.Component {
                         )
                     }
                     </tbody>
+
                 </table>
 
             </div>

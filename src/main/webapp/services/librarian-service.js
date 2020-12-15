@@ -19,6 +19,9 @@ const createLibrarian = () =>
 const deleteLibrarian = (id) =>
     fetch(`${DELETE_LIBRARIAN_URL}/${id}`)
 
+const createLibrarian = () =>
+    fetch(`${CREATE_LIBRARIAN_URL}`)
+
 const renameLibrarianPosition = (librarian) =>
     fetch(`${RENAME_LIBRARIAN_POSITION}/${librarian.id}/${librarian.position}`)
         .then(response => response.json())
