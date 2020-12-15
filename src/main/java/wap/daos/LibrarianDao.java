@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import wap.models.User;
 import wap.repositories.LibrarianRepository;
 
 import javax.persistence.GeneratedValue;
@@ -45,6 +46,7 @@ public class LibrarianDao {
     librarian.setPosition(newPosition);
     return librarianRepository.save(librarian);
   }
+
 
 }
 
