@@ -19,17 +19,17 @@ class AuthorEditor extends React.Component {
     render() {
         return(
             <div className="container">
-                <h1>Author Editor {this.state.author.role}</h1>
+                <h1>Author Bio Editor {this.state.author.id}</h1>
                 <input className="form-control" readOnly={true} value={this.state.author.id}/>
                 <input
                     onChange={(event) => this.setState({
                         author: {
                             ...this.state.author,
-                            role: event.target.value
+                            biography: event.target.value
                         }
                     })}
                     className="form-control"
-                    value={this.state.author.state}/>
+                    value={this.state.author.biography}/>
                 <button onClick={this.saveAuthor}>
                     Save
                 </button>
