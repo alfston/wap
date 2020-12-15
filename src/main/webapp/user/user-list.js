@@ -56,7 +56,7 @@ class UserList extends React.Component {
                     }
                     </tbody>
                 </table>
-                <button onClick={this.createUser}>
+                <button onClick={() =>this.createUser()}>
                     Create
                 </button>
             </div>

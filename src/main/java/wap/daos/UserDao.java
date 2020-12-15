@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 @RestController
@@ -29,9 +31,10 @@ public class UserDao {
   @GetMapping("/createUser")
   public User createUser() {
     User user = new User();
+    //user.setId(ThreadLocalRandom.current().nextInt());
     user.setRole("New Role");
-    user.setFirst_name("New First Name");
-    user.setLast_name("New Last Name");
+   // user.setFirst_name("New First Name");
+   // user.setLast_name("New Last Name");
     return userRepository.save(user);
   }
   @GetMapping("/renameUser/{id}/{newRole}")
