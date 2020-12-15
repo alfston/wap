@@ -34,7 +34,7 @@ class LibraryList extends React.Component {
              }
              </table>
 
-              <button onClick={this.createLibrary}>
+              <button onClick={() => this.createLibrary}>
                     Create
                   </button>
                   <table>

@@ -48,7 +48,7 @@ class LibrarianList extends React.Component {
                     }
                     </tbody>
                 </table>
-                <button onClick={this.createLibrarian}>
+                <button onClick={() => this.createLibrarian}>
                     Create
                 </button>
             </div>
